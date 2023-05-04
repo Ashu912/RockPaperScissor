@@ -1,0 +1,787 @@
+body {
+    font-family: 'Roboto';
+    background-color: #8CC461;
+}
+
+p {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+img {
+    position: absolute;
+}
+
+.border {
+    margin-left: 20%;
+    margin-top: 2%;
+    width: 57%;
+    padding: 10px;
+    border: 2px solid #FFFFFF;
+    border-radius: 13px;
+    display: block;
+}
+
+.gameElement {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    padding-left: 20px;
+    letter-spacing: 5px;
+    line-height: 10px;
+
+}
+
+.Score {
+    display: flex;
+    /* flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px; */
+    margin-left: 13%;
+}
+
+.child1 {
+    padding-top: 10px;
+    width: 190px;
+    height: 180px;
+    font-size: 28px;
+    color: #656565;
+    letter-spacing: 0.1em;
+
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 9px;
+}
+
+.child2 {
+    padding-top: 10px;
+    margin-left: 15px;
+    width: 190px;
+    height: 180px;
+    font-size: 28px;
+    color: #656565;
+    letter-spacing: 0.1em;
+
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 9px;
+}
+
+.computer {
+    line-height: 30px;
+    margin-left: 12px;
+
+
+
+}
+
+.sc1 {
+    line-height: 30px;
+    margin-left: 43px;
+    margin-bottom: 10px;
+}
+
+#computerScore {
+    color: #252525;
+    font-size: 80px;
+    line-height: 130px;
+    margin-left: 70px;
+
+
+
+}
+
+.your {
+    line-height: 30px;
+    margin-left: 47px;
+
+}
+
+.sc2 {
+    line-height: 30px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+#YourScore {
+    color: #252525;
+    font-size: 80px;
+    line-height: 135px;
+    margin-left: 64px;
+}
+
+.ellipse {
+    height: 160px;
+    width: 160px;
+    margin-left: -24px;
+    margin-top: -22px;
+}
+
+.rock {
+    position: absolute;
+    width: 80px;
+    height: 58.51px;
+    margin-top: 27px;
+    margin-left: 15px;
+}
+
+.rockPosition {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 303px;
+    top: 327px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+}
+
+.line1 {
+    margin-left: 126px;
+    margin-top: 46px;
+}
+
+.scissorPosition {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 573px;
+    top: 327px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.Scissor {
+
+    position: absolute;
+    width: 43px;
+    height: 54.51px;
+    margin-top: 27px;
+    margin-left: 35px;
+
+}
+
+.line2 {
+    margin-left: -47px;
+    margin-top: 106px;
+}
+
+.paperPosition {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 436px;
+    top: 530px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+}
+
+.Paper {
+    position: absolute;
+    width: 43px;
+    height: 54.51px;
+    margin-top: 27px;
+    margin-left: 35px;
+}
+
+.line3 {
+    margin-left: -41px;
+    margin-top: -96px;
+}
+
+.Next {
+    background-color: #8CC461;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    width: 100px;
+    letter-spacing: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+    border-radius: 9px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.rules {
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    width: 100px;
+    letter-spacing: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    right: 150px;
+    border-radius: 9px;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+}
+
+.gameRule {
+    margin-left: 60px;
+}
+
+.popupContent {
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 325px;
+    width: 278px;
+    background: #004429;
+    border: 7px solid #FFFFFF;
+    border-radius: 13px;
+}
+
+.dot {
+    height: 10px;
+    width: 15px;
+    background: #FFD600;
+    color: #FFD600;
+    margin-right: 10px;
+
+}
+
+.popupDescription {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.close {
+    align-items: flex-end;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-size: 30px;
+    font-family: 'Dangrek', cursive;
+    background-color: red;
+    border: 4px solid white;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: 250px;
+    top: -10px;
+    cursor: pointer;
+
+}
+
+.Playe_win {
+    margin-top: 37px;
+    margin-left: 220px;
+    height: 350px;
+    width: 350px;
+    background: rgba(46, 154, 37, 0.39);
+    box-shadow: rgba(46, 154, 37, 0.39) 0px 1px 62px 0px;
+    border-radius: 100%;
+
+}
+
+.ImageBackground {
+    height: 140px;
+    width: 140px;
+    background-color: white;
+}
+
+.scissorPositionWinner {
+    position: absolute;
+    width: 137px;
+    height: 137px;
+    left: 50px;
+    top: 49px;
+    background: #FFFFFF;
+    border-radius: 100px;
+
+
+}
+
+.ScissorWinner {
+
+    position: absolute;
+    width: 43px;
+    height: 54.51px;
+    margin-top: 38px;
+    margin-left: 47px;
+
+
+}
+
+.ellipseWinner {
+    height: 180px;
+    width: 180px;
+    margin-left: -24px;
+    margin-top: -22px;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+}
+
+.BackgroundLighrGreen {
+    position: absolute;
+    margin-top: 28px;
+    margin-left: 31px;
+    height: 290px;
+    width: 290px;
+    background: rgba(29, 168, 43, 0.79);
+    border-radius: 100%;
+}
+
+.BackgroundGreen {
+    position: absolute;
+    margin-top: 28px;
+    margin-left: 31px;
+    height: 230px;
+    width: 230px;
+    background: rgba(59, 103, 32, 1);
+    border-radius: 100%;
+}
+
+.GreenText {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 8px;
+    padding-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.PlayAgainContent {
+    display: flex;
+    flex-direction: column;
+    /* margin-left:  728px; */
+}
+
+.yWin {
+    position: absolute;
+    font-size: 39px;
+    color: white;
+    margin-top: -270px;
+    margin-left: 502px;
+    font-family: 'Roboto';
+    letter-spacing: 0.1em;
+}
+.yWin1 {
+    position: absolute;
+    font-size: 39px;
+    color: white;
+    margin-top: -270px;
+    margin-left: 565px;
+    font-family: 'Roboto';
+    letter-spacing: 0.1em;
+}
+
+.yWinPc {
+    position: absolute;
+    font-size: 26px;
+    margin-top: -216px;
+    margin-left: 516px;
+    color: white;
+    font-family: 'Roboto';
+    letter-spacing: 0.1em;
+}
+.yWinPc1 {
+    position: absolute;
+    font-size: 26px;
+    margin-top: -216px;
+    margin-left: 575px;
+    color: white;
+    font-family: 'Roboto';
+    letter-spacing: 0.1em;
+}
+
+.yWinbtn {
+    position: absolute;
+    height: 55px;
+    width: 180px;
+    border-radius: 10px;
+    margin-left: 517px;
+    margin-top: -158px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: #6B6B6B;
+
+}
+.yWinbtn1 {
+    position: absolute;
+    height: 55px;
+    width: 180px;
+    border-radius: 10px;
+    margin-left: 573px;
+    margin-top: -158px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: #6B6B6B;
+
+}
+
+.pcWins {
+    /* position: absolute; */
+    width: 137px;
+    height: 137px;
+    left: 50px;
+    top: 49px;
+    background: #FFFFFF;
+    border-radius: 100px;
+}
+
+.pcWinsEcllipse {
+    height: 180px;
+    width: 180px;
+    margin-left: -24px;
+    margin-top: -22px;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+}
+
+.pcWinsImage {
+    /* position: absolute; */
+    width: 43px;
+    height: 54.51px;
+    margin-top: 38px;
+    margin-left: 47px;
+
+}
+
+.MovePcWins {
+    margin-left: 851px;
+    margin-top: -249px;
+}
+
+.PcPicked {
+    position: absolute;
+    margin-left: 25px;
+    margin-top: -67px;
+    padding-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.PC_win {
+    margin-top: 37px;
+    margin-left: 728px;
+    height: 350px;
+    width: 350px;
+    background: rgba(46, 154, 37, 0.39);
+    box-shadow: 0px 1px 62px 0px rgba(46, 154, 37, 0.39);
+    border-radius: 100%;
+}
+
+.YouLost {
+    margin-left: 290px;
+    margin-top: -249px;
+}
+
+.rockPositionTie {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 330px;
+    top: 360px;
+    background: rgb(255, 255, 255);
+    border-radius: 100px;
+}
+
+.rockTie {
+    position: absolute;
+    width: 43px;
+    height: 54.51px;
+    margin-top: 38px;
+    margin-left: 47px;
+}
+
+.rockTie_1 {
+    position: absolute;
+    width: 43px;
+    height: 54.51px;
+    margin-top: 38px;
+    margin-left: 47px;
+}
+
+.ellipseTie {
+    height: 190px;
+    width: 190px;
+    margin-left: -24px;
+    margin-top: -22px;
+}
+
+.rockPositionTie2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 890px;
+    top: 360px;
+    background: rgb(255, 255, 255);
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 0px 21px 1px inset;
+}
+
+.Tie {
+    position: absolute;
+    font-size: 39px;
+    color: white;
+    margin-top: 136px;
+    margin-left: 610px;
+    font-family: Roboto;
+    letter-spacing: 0.1em;
+}
+
+.Tiebtn {
+    position: absolute;
+    height: 55px;
+    width: 180px;
+    border-radius: 10px;
+    margin-left: 598px;
+    margin-top: 229px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: rgb(107, 107, 107);
+}
+
+
+#dan{
+    display: none;
+}
+
+#dan1{
+    display: none;
+}
+
+
+/* Hurry Css Start */
+body {
+    font-family: 'Roboto';
+    background-color: #8CC461;
+}
+.Rul{
+    /* margin-left: 60px; */
+    letter-spacing: 10px;
+}
+.Vector {
+    position: absolute;
+height: 200px;
+width: 200px;
+    left: 43.52%;
+    right: 40.83%;
+    top: 23.61%;
+    bottom: 47.15%;
+}
+
+.One {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 428px;
+    top: 150px;
+}
+
+.Two {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 760px;
+    top: 46px;
+}
+
+.Three {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 545px;
+    top: 46px;
+}
+
+.Four {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 650px;
+    top: 70px;
+
+}
+
+.Five {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 528px;
+    top: 311px;
+}
+
+.Six {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 810px;
+    top: 230px;
+}
+
+.Seven {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 880px;
+    top: 123px;
+}
+
+.Nine {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 510px;
+    top: 90px;
+}
+.Hurr{
+    position: absolute;
+    width: 464px;
+    height: 86px;
+    left: 471px;
+    top: 360px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 65px;
+    line-height: 107px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+.HurrBtn{
+    position: absolute;
+    height: 55px;
+    width: 180px;
+    border-radius: 10px;
+    margin-left: 582px;
+    margin-top: 522px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: #6B6B6B;
+}
+.Won{
+    position: absolute;
+    width: 700px;
+    height: 48px;
+    left: 456px;
+    top: 463px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 41px;
+    line-height: 48px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+
+}
+.Hrules {
+    color: white;
+    padding: 10px;
+    /* padding-left: 40px; */
+    border: 2px solid white;
+    width: 100px;
+  
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    border-radius: 9px;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.Hbtn {
+    padding: 10px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    display: none;
+}
+.close {
+    align-items: flex-end;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-size: 30px;
+    font-family: 'Dangrek', cursive;
+    background-color: red;
+    border: 4px solid white;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: 250px;
+    top: -10px;
+    cursor: pointer;
+
+}.popupContent {
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 325px;
+    width: 278px;
+    background: #004429;
+    border: 7px solid #FFFFFF;
+    border-radius: 13px;
+}
+.dot {
+    height: 10px;
+    width: 15px;
+    background: #FFD600;
+    color: #FFD600;
+    margin-right: 10px;
+
+}
+
+.popupDescription {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+.gameRule {
+    margin-left: 60px;
+}
+/* Hurry Css End */
